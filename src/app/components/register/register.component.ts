@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
     .then( (res)  => {
       this.router.navigate(['/dashboard']);
     }).catch ( (err) => {
-      console.log("Error!!!");
+      console.log("Error!!!!!!");
     })
   }
 }
