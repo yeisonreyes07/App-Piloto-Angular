@@ -15,15 +15,29 @@
         <li class="nav-item">
             <a class="nav-link" href="#" routerLink="/dashboard">Dashboard</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#" *ngIf="!isLogin" routerLink="/login">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#" *ngIf="!isLogin" routerLink="/register">Registro</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#" (click)="logOut()" *ngIf="isLogin">Cerrar Sesión</a>
-        </li>
+        </ul>
+
+        <!--NAVBAR RIGHT-->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="#" *ngIf="!isLogin" routerLink="/login"><i class="fa fa-lock"></i> Iniciar Sesión</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" *ngIf="!isLogin" routerLink="/register"><i class="fa fa-pencil"></i> Registro</a>
+            </li>
+            <li class="nav-item dropdown" *ngIf="isLogin">
+                <img class="navbar_imageprofile" src="../../../assets/img/user_default.png">
+                <a class="nav-link dropdown-toggle account" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Hola {{email}}<br>
+                    <span class="account_subtitle">Mi perfil</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header text-right">Datos de mi cuenta</h6>
+                    <a class="dropdown-item text-right" href="#">Perfil</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-right" href="#" (click)="logOut()" *ngIf="isLogin">Cerrar Sesión</a>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>

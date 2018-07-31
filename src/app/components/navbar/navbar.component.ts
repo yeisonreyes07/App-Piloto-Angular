@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   public isLogin:boolean
-  public userName:string
+  public username:string
   public email:string
 
   constructor(
@@ -22,11 +22,11 @@ export class NavbarComponent implements OnInit {
     this.authService.getAuth().subscribe(( auth ) => {
       if (auth) {
         this.isLogin = true;
-        this.userName = auth.displayName;
+        this.username = auth.displayName;
         this.email = auth.email;
 
-        console.log(this.email);
-        console.log(this.userName);
+        console.log( this.email );
+        console.log( this.username );
       } else {
         this.isLogin = false;
       }
