@@ -25,6 +25,9 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+//GUARDS
+import { AuthGuard } from './guards/auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +47,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
  
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
