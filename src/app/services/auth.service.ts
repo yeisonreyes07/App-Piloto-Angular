@@ -15,7 +15,7 @@ export class AuthService {
     public _angularFireAuth: AngularFireAuth
   ) { }
 
-  registarUsuario( email:string, password:string ){
+  registrarUsuario( email:string, password:string ){
     return new Promise(( resolve, reject ) => {
       this._angularFireAuth.auth.createUserWithEmailAndPassword ( email,password )
       .then( userData => resolve(userData),
