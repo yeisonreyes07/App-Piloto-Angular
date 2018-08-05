@@ -47,4 +47,8 @@ export class AuthService {
     return this._angularFireAuth.auth.signInWithPopup( new firebase.auth.FacebookAuthProvider());
   }
 
+  recuperarContrasena( email:string ){
+    return this._angularFireAuth.auth.sendPasswordResetEmail(email)
+  }
+
 }

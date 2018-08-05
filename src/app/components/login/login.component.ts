@@ -51,4 +51,16 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/login']);
     })
   }
+  
+  onClickRecuperarContrasena(){
+    this.authService.recuperarContrasena( this.email )
+    .then( (res)  => {
+      console.log("CORREO ENVIADO");
+      this.router.navigate(['/login']);
+    }).catch ( (err) => {
+      console.log("FALLO RECUPERAR");
+      this.router.navigate(['/login']);
+    })
+  }
+
 }
