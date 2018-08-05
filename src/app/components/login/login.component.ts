@@ -31,4 +31,24 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  onClickGoogleLogin(){
+    this.authService.googleLogin()
+    .then ( (res) => {
+      console.log(res);
+      this.router.navigate(['/dashboard']);
+    }).catch ( (err) => {
+      console.log("Error con Google");
+      this.router.navigate(['/login']);
+    })
+  }
+
+  onClickFacebookLogin(){
+    this.authService.facebookLogin()
+    .then ( (res) => {
+      this.router.navigate(['/dashboard']);
+    }).catch ( (err) => {
+      console.log("Error con Facebook");
+      this.router.navigate(['/login']);
+    })
+  }
 }

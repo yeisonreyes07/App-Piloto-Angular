@@ -39,4 +39,12 @@ export class AuthService {
     return this._angularFireAuth.auth.signOut();
   }
 
+  googleLogin(){
+    return this._angularFireAuth.auth.signInWithPopup( new firebase.auth.GoogleAuthProvider());
+  }
+
+  facebookLogin(){
+    return this._angularFireAuth.auth.signInWithPopup( new firebase.auth.FacebookAuthProvider());
+  }
+
 }

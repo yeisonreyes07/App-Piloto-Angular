@@ -11,11 +11,11 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   ngOnInit(){
-    $('.dropdown').on('show.bs.dropdown', function(e){
+    $('.dropdown-toggle').on('show.bs.dropdown', function(e){
       $(this).find('.dropdown-menu').first().stop(true, true).slideDown(100);
     });
     
-    $('.dropdown').on('hide.bs.dropdown', function(e){
+    $('.dropdown-toggle').on('hide.bs.dropdown', function(e){
       $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
     });
   }

@@ -15,18 +15,6 @@
         <li class="nav-item">
             <a class="nav-link" href="#" routerLink="/dashboard">Dashboard</a>
         </li>
-        <li class="nav-item">
-            <div class="row no-gutters">
-                <div class="col">
-                    <input class="form-control border-secondary border-right-0 rounded-0" type="search" value="search" id="example-search-input4">
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </li>
         </ul>
 
         <!--NAVBAR RIGHT-->
@@ -38,9 +26,10 @@
                 <a class="nav-link" href="#" *ngIf="!isLogin" routerLink="/register"><i class="fa fa-pencil"></i> Registro</a>
             </li>
             <li class="nav-item dropdown" *ngIf="isLogin">
-                <img class="navbar_imageprofile" src="../../../assets/img/user_default.png">
+                <img class="rounded-circle navbar_imageprofile" src="{{userImage}}">
                 <a class="nav-link dropdown-toggle account" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Hola {{email}}<br>
+                    Hola {{ (email.length>18)? (email | slice:0:15)+'...':(email) }}
+                    <br>
                     <span class="account_subtitle">Mi perfil</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

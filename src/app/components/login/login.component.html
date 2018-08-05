@@ -17,9 +17,9 @@
                 <label class="form-check-label" for="exampleCheck1">Mantenerme conectado</label>
               </div>
               <button type="submit" class="btn btn-primary btn-block" style="margin: 10px 0px 10px 0px">Iniciar Sesión</button>
-              <button class="btn btn-google btn-block" style="margin: 10px 0px 10px 0px"><img src="../../../assets/img/googleicon.svg" class="d-inline-block" alt=""> Acceder con Google</button>
-              <button class="btn btn-facebook btn-block" style="margin: 10px 0px 10px 0px"><i class="fa fa-facebook-square"></i> Inicia Sesión con Facebook</button>
             </form>
+              <button class="btn btn-google btn-block" (click)="onClickGoogleLogin()" style="margin: 10px 0px 10px 0px"><img src="../../../assets/img/googleicon.svg" class="d-inline-block" alt=""> Acceder con Google</button>
+              <button class="btn btn-facebook btn-block" (click)="onClickFacebookLogin()" style="margin: 10px 0px 10px 0px"><i class="fa fa-facebook-square"></i> Inicia Sesión con Facebook</button>
           <a href="" class="card-link">¿Olvidaste tu usuario y contraseña?</a>
         </div>
       </div>
