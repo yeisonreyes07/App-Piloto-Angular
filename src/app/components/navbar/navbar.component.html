@@ -27,8 +27,10 @@
             </li>
             <li class="nav-item dropdown" *ngIf="isLogin">
                 <img class="rounded-circle navbar_imageprofile" src="{{userImage}}">
+                <img class="rounded-circle navbar_imageprofile" *ngIf="userImage==null" src="../../../assets/img/user_default.png">
                 <a class="nav-link dropdown-toggle account" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Hola {{ (email.length>18)? (email | slice:0:15)+'...':(email) }}
+                    <span *ngIf="username==null">Hola {{ (email.length>18)? (email | slice:0:15)+'...':(email) }}</span>
+                    <span *ngIf="username!=null">Hola {{ username }}</span>
                     <br>
                     <span class="account_subtitle">Mi perfil</span>
                 </a>

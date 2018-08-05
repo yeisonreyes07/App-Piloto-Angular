@@ -1,0 +1,29 @@
+.jumbotron{
+    background-color: #721ecc;
+    color: white;
+    margin: 0;
+    border-radius: 0px;
+    background: linear-gradient(to right, #721ecc, #6b148e);
+}
+
+.jumbotron a{
+    color: #ffd65c;
+}
+
+.jumbotron a:hover{
+    color: #c4a23b;
+}
+
+
+.jumbotron_text{
+    max-width: 700px;
+}
+
+.jumbotron b{
+    color:#FFEB3B;
+    font-weight: 500;
+}
+
+.jumbotron .display-3 {
+    font-size: 4rem;
+}

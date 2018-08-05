@@ -1,0 +1,20 @@
+.jumbotron{
+    height: calc(100vh - 60px);
+    background-color: #721ecc;
+    color: white;
+    margin: 0;
+    border-radius: 0px;
+}
+
+.jumbotron a{
+    color: #ffd65c;
+}
+
+.jumbotron a:hover{
+    color: #c4a23b;
+}
+
+.credits{
+    font-size: 12px;
+    margin-top: 15px;
+}

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
-import { promise } from '../../../node_modules/protractor';
+import * as firebase from 'firebase';
+import { promise } from 'protractor';
 import { resolve } from 'url';
 import 'rxjs/add/operator/map'
 

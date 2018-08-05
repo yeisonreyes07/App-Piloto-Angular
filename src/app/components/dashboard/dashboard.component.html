@@ -1,3 +1,16 @@
-<p>
-  dashboard works!
-</p>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="display-3" *ngIf="username==null">Hola, {{email}}</h1>
+        <h1 class="display-3" *ngIf="username!=null">Hola, {{username}}</h1>
+        <p class="lead jumbotron_text">Esta Web App tiene como propósito la prueba de <b>Angular</b> Framework y sus módulos, además de autenticación e interación con datos usando <b>Google Firebase</b> y la creación de componentes para distintas funciones.</p>
+      </div>
+      <div class="col-md-6">
+        <img class="mx-auto d-block" src="../../../assets/img/bg_header.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-tarea></app-tarea>
